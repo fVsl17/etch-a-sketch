@@ -9,12 +9,10 @@ let currentColor = 1;
 
 container.addEventListener('mousedown', () => {
     clicked = 1;
-    console.log("CLICKED!");
 });
 
 container.addEventListener('mouseup', () => {
     clicked = 0;
-    console.log("LEFT!!!");
 });
 
 let randomColor = () => {
