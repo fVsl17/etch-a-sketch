@@ -54,7 +54,6 @@ changeSize.addEventListener('click',()=>{
         }
     }
     const squareDimension = 600 / x;
-    console.log(squareDimension);
     x = x * x;
     while(container.firstChild){
         container.removeChild(container.lastChild);
