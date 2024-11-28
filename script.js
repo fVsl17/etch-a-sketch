@@ -1,9 +1,11 @@
 'use strict'
 
 const container = document.querySelector('.container');
-const initialDimension = 100;
+const initialDimension = 1;
 let clicked = 0;
 let currentColor = 1;
+
+
 
 container.addEventListener('mousedown', () => {
     clicked = 1;

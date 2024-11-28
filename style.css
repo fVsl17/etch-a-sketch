@@ -7,6 +7,12 @@ body {
     background-color:blueviolet;
 }
 
+.center {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:1500px;
+}
 
 .container {
     display:flex;
@@ -19,6 +25,7 @@ body {
     flex-wrap:wrap;
     box-shadow:5px 5px 5px black;
     border-radius:10px;
+    margin-left:150px;
 }
 
 
@@ -33,6 +40,7 @@ body {
     align-items:center;
     justify-content: space-evenly;
     padding-top:25px;
+    margin-left:150px;
 }
 
 .button-style {
@@ -74,4 +82,91 @@ body {
 
 .button-style:not(:hover) {
     transition:all 0.4s;
+}
+
+.colors {
+    display:flex;
+    height:50px;
+    width:300px;
+    border: 1px solid black;
+    flex-wrap:wrap;
+}
+
+.colors > div {
+    height:25px;
+    width:30px;
+}
+
+.red {
+    background-color:red;
+}
+.blue {
+    background-color:blue;
+}
+.green {
+    background-color:green;
+}
+.orange {
+    background-color:orange;
+}
+.pink {
+    background-color:pink;
+}
+.violet{
+    background-color:violet;
+}
+
+.yellow {
+    background-color:yellow;
+}
+
+.lime {
+    background-color: lime;
+}
+.magenta {
+    background-color:magenta;
+}
+
+.dark-green {
+    background-color:darkgreen;
+}
+
+.dark-blue {
+    background-color:darkblue;
+}
+
+.dark-red {
+    background-color:darkred;
+}
+
+.turquoise {
+    background-color:turquoise;
+}
+
+.light-blue {
+    background-color:lightblue;
+}
+
+.light-coral {
+    background-color:lightcoral;
+}
+
+.light-green {
+    background-color:lightgreen;
+}
+
+.light-grey {
+    background-color:lightgrey;
+}
+
+.grey {
+    background-color:grey;
+}
+
+.black {
+    background-color:black;
+}
+
+.white {
+    background-color:white;
 }
