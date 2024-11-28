@@ -37,6 +37,12 @@ changeSize.addEventListener('click',()=>{
     while (isNaN(x)){
         x = Number(prompt("Please enter a number!!!"));
     }
+    while (x > 100){
+        x = Number(prompt("Please enter a number lower or equal to 100!"));
+        while (isNaN(x)){
+            x = Number(prompt("Please enter a number!!!"));
+        }
+    }
     const squareDimension = 600 / x;
     console.log(squareDimension);
     x = x * x;
