@@ -14,6 +14,10 @@ colorsContainer.childNodes.forEach((el) => {
     });
 });
 
+container.addEventListener('mouseleave', () => {
+    clicked = 0;
+});
+
 container.addEventListener('mousedown', () => {
     clicked = 1;
 });
