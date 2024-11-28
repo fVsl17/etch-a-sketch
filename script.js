@@ -1,7 +1,6 @@
 'use strict'
 
 const container = document.querySelector('.container');
-
 const initialDimension = 16;
 
 
@@ -11,11 +10,16 @@ for (let i = 0; i < initialDimension * initialDimension; i++){
     container.appendChild(d);
 }
 
-container.childNodes.forEach(function(el) {
-    el.addEventListener('mouseover', () => {
-        el.style.backgroundColor = 'black';
+function addEvents(nodes){
+    nodes.forEach(function(el) {
+        el.addEventListener('mouseover', () => {
+            el.style.backgroundColor = 'black';
+        });
     });
-});
+}
+let nodes = container.childNodes;
+
+addEvents(nodes);
 
 const resetButton = document.querySelector('.reset');
 
@@ -33,4 +37,20 @@ changeSize.addEventListener('click',()=>{
     while (isNaN(x)){
         x = Number(prompt("Please enter a number!!!"));
     }
+    const squareDimension = 600 / x;
+    console.log(squareDimension);
+    x = x * x;
+    while(container.firstChild){
+        container.removeChild(container.lastChild);
+    }
+    for (let i = 0; i < x; i++){
+        const d = document.createElement('div');
+        d.classList.add('grid-element');
+        d.style.height = `${squareDimension}px`;
+        d.style.width = `${squareDimension}px`;
+        container.appendChild(d);
+    }
+    nodes = container.childNodes;
+    addEvents(nodes);
 });
+
