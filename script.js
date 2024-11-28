@@ -24,3 +24,10 @@ resetButton.addEventListener('click', ()=>{
         el.style.backgroundColor = 'white';
     });
 });
+
+const changeSize = document.querySelector('.change-size');
+
+changeSize.addEventListener('click',()=>{
+    const x = Number(prompt("New grid size: (Your number * Your number)"));
+    console.log(x);
+});
