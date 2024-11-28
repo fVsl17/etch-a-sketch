@@ -28,6 +28,9 @@ resetButton.addEventListener('click', ()=>{
 const changeSize = document.querySelector('.change-size');
 
 changeSize.addEventListener('click',()=>{
-    const x = Number(prompt("New grid size: (Your number * Your number)"));
-    console.log(x);
+    let x = prompt('New grid size: (Your number * Your number)');
+    x = Number(x);
+    while (isNaN(x)){
+        x = Number(prompt("Please enter a number!!!"));
+    }
 });
