@@ -16,7 +16,7 @@ body {
 
 .container {
     display:flex;
-    border:5px solid black;
+    border:25px solid black;
     height: 600px;
     width: 600px;
     align-items: center;
