@@ -1,3 +1,3 @@
 # etch-a-sketch
 
-Etch-a-Sketch (I guess)
+Etch-a-Sketch
