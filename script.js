@@ -18,20 +18,17 @@ container.addEventListener('mouseleave', () => {
     clicked = 0;
 });
 
-container.addEventListener('mousedown', () => {
+container.addEventListener('mousedown', (el) => {
     clicked = 1;
+    el.target.style.backgroundColor = currentColorChooseable;
 });
+
+
 
 container.addEventListener('mouseup', () => {
     clicked = 0;
 });
 
-let randomColor = () => {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    return `rgb(${r} ${g} ${b})`;
-}
 
 for (let i = 0; i < initialDimension * initialDimension; i++){
     const d = document.createElement('div');
@@ -43,8 +40,8 @@ function addEvents(nodes){
     nodes.forEach(function(el) {
         el.addEventListener('mouseover', () => {
             if (clicked === 1){
-                el.style.backgroundColor=currentColorChooseable;
-          }
+                el.style.backgroundColor = currentColorChooseable;
+            }
         });
     });
 }
@@ -90,17 +87,3 @@ changeSize.addEventListener('click',()=>{
     addEvents(nodes);
 });
 
-const changeColor = document.querySelector(".change-color");
-changeColor.textContent = 'Change color to random';
-
-
-changeColor.addEventListener('click', () => {
-    if (currentColor === 1){
-        currentColor = 2;
-        changeColor.textContent = 'Change color to black';
-    }
-    else{
-        currentColor = 1;
-        changeColor.textContent = 'Change color to random';
-    }
-});

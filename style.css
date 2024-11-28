@@ -60,9 +60,6 @@ body {
     background-color:#FFCC99;
 }
 
-.button-style:nth-child(3){
-    background-color: #99FF99;
-}
 
 
 .button-style:nth-child(1):hover {
@@ -75,10 +72,7 @@ body {
     transition:all 0.4s;
 }
 
-.button-style:nth-child(3):hover {
-    background-color: #00CC00;
-    transition:all 0.4s;
-}
+
 
 .button-style:not(:hover) {
     transition:all 0.4s;
