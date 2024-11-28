@@ -2,10 +2,16 @@
 
 const container = document.querySelector('.container');
 const initialDimension = 1;
+const colorsContainer = document.querySelector('.colors');
 let clicked = 0;
 let currentColor = 1;
+let currentColorChooseable = '';
 
-
+colorsContainer.childNodes.forEach((el) => {
+    el.addEventListener('click', () => {
+        currentColorChooseable = el.classList[0];
+    });
+});
 
 container.addEventListener('mousedown', () => {
     clicked = 1;
@@ -32,10 +38,7 @@ function addEvents(nodes){
     nodes.forEach(function(el) {
         el.addEventListener('mouseover', () => {
             if (clicked === 1){
-            if (currentColor === 1)
-            el.style.backgroundColor = 'black';
-            else
-            el.style.backgroundColor = randomColor();
+                el.style.backgroundColor=currentColorChooseable;
           }
         });
     });
