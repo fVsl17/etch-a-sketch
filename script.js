@@ -1,7 +1,7 @@
 'use strict'
 
 const container = document.querySelector('.container');
-const initialDimension = 16;
+const initialDimension = 100;
 let clicked = 0;
 let currentColor = 1;
 
