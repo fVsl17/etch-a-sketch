@@ -6,10 +6,11 @@ const colorsContainer = document.querySelector('.colors');
 let clicked = 0;
 let currentColor = 1;
 let currentColorChooseable = '';
-
+const shownColor = document.querySelector('.shown-color');
 colorsContainer.childNodes.forEach((el) => {
     el.addEventListener('click', () => {
         currentColorChooseable = el.classList[0];
+        shownColor.style.backgroundColor = el.classList[0];
     });
 });
 

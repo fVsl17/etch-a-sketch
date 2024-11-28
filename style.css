@@ -170,3 +170,24 @@ body {
 .white {
     background-color:white;
 }
+
+.colors-container{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.shown-color {
+    border:1px solid black;
+    height:25px;
+    width:30px;
+    background-color:white;
+}
+
+.current-color {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    gap:10px;
+}
