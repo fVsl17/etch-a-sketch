@@ -3,14 +3,24 @@
 const container = document.querySelector('.container');
 const initialDimension = 100;
 const colorsContainer = document.querySelector('.colors');
+const customcolor = document.querySelector('#customcolor');
 let clicked = 0;
 let currentColor = 1;
 let currentColorChooseable = '';
 const shownColor = document.querySelector('.shown-color');
+const palette = document.querySelector('#customcolor');
+
+
+function watchColorPicker(event) {
+    currentColorChooseable = event.target.value;
+    shownColor.style.backgroundColor = currentColorChooseable;
+};
+palette.addEventListener('change', watchColorPicker, false);
+
 colorsContainer.childNodes.forEach((el) => {
     el.addEventListener('click', () => {
         currentColorChooseable = el.classList[0];
-        shownColor.style.backgroundColor = el.classList[0];
+        shownColor.style.backgroundColor = currentColorChooseable;
     });
 });
 

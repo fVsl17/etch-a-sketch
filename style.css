@@ -185,3 +185,9 @@ body {
     justify-content:center;
     gap:10px;
 }
+
+.custom-color {
+    position:relative;
+    left:125px;
+    top:50px;
+}
